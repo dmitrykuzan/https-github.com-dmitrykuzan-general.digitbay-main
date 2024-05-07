@@ -1,0 +1,418 @@
+.ticket {
+  padding-top: 6rem;
+  padding-bottom: 12rem;
+
+  @media (max-width: em(767)) {
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+  }
+
+  .hero__search {
+    display: none;
+  }
+
+  &__wrapper {
+  }
+
+  &__title {
+    padding-bottom: 3rem;
+    text-align: center;
+  }
+
+  &__body {
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 0.8rem;
+    padding: 3rem;
+    max-width: 80rem;
+    background-color: var(--clr-default-100);
+
+    @media (max-width: em(1200)) {
+      max-width: initial;
+    }
+
+    @media (max-width: em(767)) {
+      padding: 1.5rem;
+    }
+  }
+
+  &__product {
+    &-wrapper {
+      display: flex;
+      margin-bottom: 3rem;
+
+      @media (max-width: em(575)) {
+        flex-direction: column;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  &__image {
+    flex-shrink: 0;
+    margin-right: 3rem;
+    max-width: 17rem;
+
+    img {
+      border-radius: 0.6rem;
+    }
+
+    @media (max-width: em(767)) {
+      margin-right: 1.5rem;
+    }
+
+    @media (max-width: em(575)) {
+      margin-right: auto;
+      margin-bottom: 2rem;
+      margin-left: auto;
+    }
+  }
+
+  &__info {
+    width: 100%;
+
+    &-title {
+      margin-bottom: 1.5rem;
+      border-bottom: 0.1rem solid var(--clr-default-550);
+      padding-bottom: 1.5rem;
+
+      p {
+        margin-bottom: 0.6rem;
+        color: var(--clr-primary-100);
+      }
+    }
+
+    &-name {
+      font-size: fluid-font(1.8rem, 1.6rem);
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-gap: 4rem 10rem;
+    grid-template-columns: 1fr 1fr;
+
+    @media (max-width: em(767)) {
+      grid-gap: 2rem 2rem;
+    }
+
+    @media (max-width: em(575)) {
+      display: block;
+      grid-gap: initial;
+    }
+  }
+
+  &__item {
+    &-text {
+      margin-bottom: 0.5rem;
+      line-height: 130%;
+      color: var(--clr-primary-100);
+    }
+
+    &-name {
+      &--paid {
+        position: relative;
+        padding-left: 2.2rem;
+
+        &:before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 50%;
+          width: 1.6rem;
+          height: 1.6rem;
+          background-image: url(../img/ticket/paid.svg);
+          background-size: contain;
+          background-repeat: no-repeat;
+          transform: translateY(-50%);
+        }
+      }
+    }
+
+    @media (max-width: em(575)) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__key {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+    border-radius: 0.8rem;
+    min-height: 11rem;
+    background-color: var(--clr-default-410);
+
+    &-text {
+      margin-bottom: 0.5rem;
+      font-size: 1.8rem;
+      text-align: center;
+    }
+
+    @media (max-width: em(575)) {
+      margin-bottom: 3rem;
+    }
+
+    @media (max-width: em(375)) {
+      margin-left: -1.5rem;
+      border-radius: initial;
+      width: calc(100% + 3rem);
+    }
+  }
+
+  &__copy {
+    display: flex;
+    align-items: center;
+
+    &-button {
+      position: relative;
+
+      svg {
+        width: 2.4rem;
+        height: 3rem;
+        transition: fill var(--transition);
+      }
+
+      &:hover {
+        svg {
+          fill: var(--clr-primary-200);
+          transition: fill var(--transition);
+        }
+      }
+
+      &:focus {
+        svg {
+          fill: var(--clr-primary-200);
+          transition: fill var(--transition);
+        }
+      }
+
+      &.active {
+        .ticket__copy-span {
+          opacity: 1;
+          transition: opacity var(--transition);
+        }
+      }
+    }
+
+    &-span {
+      position: absolute;
+      left: 50%;
+      top: -7rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0.8rem;
+      width: 15.5rem;
+      height: 5rem;
+      font-weight: 500;
+      color: var(--clr-default-100);
+      background-color: var(--clr-primary-200);
+      opacity: 0;
+      filter: drop-shadow(0px 32px 30px rgba(7, 7, 7, 0.12));
+      transform: translateX(-50%);
+      transition: opacity var(--transition);
+      pointer-events: none;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -0.9rem;
+        width: 2rem;
+        height: 2rem;
+        background-image: url(../img/ticket/copy-decor.svg);
+        background-size: cover;
+        transform: translateX(-50%);
+      }
+
+      @media (max-width: em(615)) {
+        left: 0;
+        width: 12.5rem;
+      }
+
+      @media (max-width: em(575)) {
+        left: 50%;
+        top: -4.5rem;
+        width: 10.5rem;
+        height: 3rem;
+        font-size: 1.4rem;
+      }
+
+      @media (max-width: em(375)) {
+        top: initial;
+        bottom: -4rem;
+
+        &::after {
+          top: -0.9rem;
+          bottom: initial;
+        }
+      }
+    }
+
+    &-input {
+      margin-right: 1.2rem;
+      min-width: 44rem;
+      font-weight: 700;
+      font-size: 2.4rem;
+      color: var(--clr-primary-200);
+      background-color: transparent;
+
+      @media (max-width: em(575)) {
+        min-width: 26rem;
+        font-size: 1.4rem;
+      }
+
+      @media (max-width: em(375)) {
+        margin-right: initial;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    @media (max-width: em(375)) {
+      flex-direction: column;
+    }
+  }
+
+  &__review {
+    &-title {
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+      font-size: fluid-font(2.4rem, 1.8rem);
+    }
+
+    &-form {
+    }
+
+    &-textarea {
+      margin-bottom: 2.5rem;
+      outline: none;
+      border: 0.1rem solid var(--clr-default-550);
+      border-radius: 0.8rem;
+      padding: 2.5rem;
+      min-width: 100%;
+      min-height: 23rem;
+      background-color: var(--clr-default-450);
+      resize: none;
+
+      @media (max-width: em(767)) {
+        padding: 1rem;
+      }
+    }
+
+    &-navigation {
+      display: flex;
+      align-items: center;
+
+      @media (max-width: em(767)) {
+        flex-direction: column;
+        align-items: initial;
+      }
+    }
+  }
+
+  &__input-wrapper {
+    &:not(:last-child) {
+      margin-right: 3rem;
+
+      @media (max-width: em(767)) {
+        margin-right: initial;
+        margin-bottom: 3rem;
+      }
+
+      @media (max-width: em(575)) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  &__input-label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      .ticket__input-box {
+        border: 0.2rem solid var(--clr-primary-200);
+        transition: border var(--transition);
+      }
+    }
+  }
+
+  &__input-radio {
+    position: absolute;
+    left: 2rem;
+    width: 0.1rem;
+    height: 0.1rem;
+    opacity: 0;
+  }
+
+  &__input-radio:checked + &__input-box {
+    border: 0.2rem solid var(--clr-primary-200);
+    transition: border var(--transition);
+  }
+
+  &__input-radio:checked + &__input-box::before {
+    background-color: var(--clr-primary-200);
+    transition: background-color var(--transition);
+  }
+
+  &__input-box {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    overflow: hidden;
+    border: 0.2rem solid var(--clr-default-550);
+    border-radius: 50%;
+    width: 2.4rem;
+    height: 2.4rem;
+    background-color: transparent;
+    transform: translateY(-50%);
+    transition: border var(--transition);
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      border-radius: 50%;
+      width: 1.2rem;
+      height: 1.2rem;
+      transform: translate(-50%, -50%);
+      transition: background-color var(--transition);
+    }
+  }
+
+  &__input-text {
+    padding-left: 3.5rem;
+  }
+
+  &__form-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    border-radius: 10rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    min-width: 12rem;
+    min-height: 5rem;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 100%;
+    color: var(--clr-default-100);
+    background-color: var(--clr-primary-200);
+    transition: background-color var(--transition);
+
+    @media (max-width: em(575)) {
+      min-width: 100%;
+      min-height: 4rem;
+    }
+
+    &:hover {
+      background-color: #32ADFF;
+      transition: background-color var(--transition);
+    }
+  }
+}

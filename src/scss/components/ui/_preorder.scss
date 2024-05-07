@@ -1,0 +1,79 @@
+.preorder {
+  position: relative;
+  background-color: var(--clr-primary-200);
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 21rem;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translateY(-50%);
+
+    @media (max-width: em(1600)) {
+      display: none;
+    }
+  }
+
+  &::before {
+    left: 0;
+    background-image: -webkit-image-set(url(../img/preorder/bg-left@2x.png) 2x, url(../img/preorder/bg-left@1x.png) 1x);
+  }
+
+  &::after {
+    right: 0;
+    background-image: -webkit-image-set(url(../img/preorder/bg-right@2x.png) 2x, url(../img/preorder/bg-right@1x.png) 1x);
+  }
+
+  a {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__text {
+    position: relative;
+    padding-top: 1.8rem;
+    padding-bottom: 1.8rem;
+
+    p {
+      font-weight: 500;
+      line-height: 150%;
+      text-align: center;
+      text-transform: uppercase;
+      color: var(--clr-default-100);
+
+      @media (max-width: em(575)) {
+        text-align: start;
+      }
+    }
+
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      @media (max-width: em(1470)) {
+        display: none;
+      }
+    }
+
+    &::before {
+      left: -15rem;
+      bottom: 0;
+      width: 15rem;
+      height: 12.5rem;
+      background-image: -webkit-image-set(url(../img/preorder/zombie-left@2x.png) 2x, url(../img/preorder/zombie-left@1x.png) 1x);
+    }
+
+    &::after {
+      right: -13rem;
+      bottom: 0;
+      width: 13rem;
+      height: 11rem;
+      background-image: -webkit-image-set(url(../img/preorder/zombie-right@2x.png) 2x, url(../img/preorder/zombie-right@1x.png) 1x);
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.logo {
+  flex-shrink: 0;
+  margin-right: 12rem;
+  max-width: 11rem;
+
+  @media (max-width: em(1360)) {
+    margin-right: 2rem;
+  }
+}

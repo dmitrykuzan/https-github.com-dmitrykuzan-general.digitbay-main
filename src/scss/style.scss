@@ -1,0 +1,192 @@
+// <МИКСИНЫ>==================================================================
+@import "./settings/mixins";
+
+// </МИКСИНЫ>=================================================================
+
+// ФУНКЦИИ====================================================================
+@import "./settings/functions";
+
+// </ФУНКЦИИ>=================================================================
+
+// <Подключаем шрифты>========================================================
+@import "./settings/fonts";
+
+// </Подключаем шрифты>=======================================================
+
+// <ОБНУЛЕНИЕ>================================================================
+@import "./settings/normalize";
+
+// </ОБНУЛЕНИЕ>===============================================================
+
+// <ПЕРЕМЕННЫЕ>===============================================================
+$containerWidth: 120rem;
+
+:root {
+  // base
+  --font-family: "Rubik", sans-serif;
+  --font-weight: 400;
+  --content-width: 117rem;
+  --container-offset: 1.5rem;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --transition: 0.3s;
+
+  // colors
+  --clr-default-100: #fff;
+  --clr-default-110: rgba(0, 0, 0, 0.02);
+  --clr-default-200: rgba(255, 255, 255, 0.24);
+  --clr-default-250: rgba(255, 255, 255, 0.06);
+  --clr-default-300: rgba(255, 255, 255, 0.12);
+  --clr-default-350: rgba(255, 255, 255, 0.48);
+  --clr-default-400: rgba(255, 255, 255, 0.64);
+  --clr-default-410: rgba(0, 153, 255, 0.04);
+  --clr-default-420: rgba(0, 153, 255, 0.08);
+  --clr-default-450:  rgba(7, 7, 7, 0.03);
+  --clr-default-500: rgba(7, 7, 7, 0.06);
+  --clr-default-550: rgba(7, 7, 7, 0.12);
+  --clr-default-600: rgba(7, 7, 7, 0.32);
+  --clr-default-700: rgba(7, 7, 7, 0.64);
+  --clr-default-900: #000;
+
+  --clr-primary-100: rgba(7, 7, 7, 0.48);
+  --clr-primary-200: #0099FF;
+  --clr-primary-250: #32ADFF;
+  --clr-primary-300: #FFD600;
+  --clr-primary-340: #F5F5F7;
+  --clr-primary-350: #F7F7F7;
+  --clr-primary-400: rgba(7, 7, 7, 0.24);
+  --clr-primary-500: #030303;
+  --clr-primary-600: #090909;
+  --clr-primary-700: #070707;
+}
+
+// </ПЕРЕМЕННЫЕ>==============================================================
+
+// <ОБОЛОЧКИ>================================================================
+body {
+  font-weight: var(--font-weight);
+  font-size: 1.6rem;
+  color: var(--clr-primary-700);
+  background-color: var(--clr-primary-340);
+
+  &.lock {
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    overscroll-behavior: none;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  min-width: 32rem;
+  min-height: 100%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 8rem;
+    bottom: 0;
+    z-index: 5;
+    background-color: rgba(7, 7, 7, 0.87);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition), visibility var(--transition);
+    backdrop-filter: blur(1.6rem);
+
+    @media (max-width: em(767)) {
+      top: 8rem;
+    }
+  }
+
+  &[data-overlay="true"]::before {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity var(--transition), visibility var(--transition);
+  }
+}
+
+main {
+  flex-grow: 1;
+}
+
+// </ОБОЛОЧКИ>===============================================================
+
+// <СЕТКА>===================================================================
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--container-offset);
+  padding-left: var(--container-offset);
+  width: 100%;
+  max-width: var(--container-width);
+}
+
+// Libs
+@import "./libs/swiper";
+@import "./libs/choices";
+
+// Libs
+
+// Components - UI
+@import "./ui";
+
+// Components - UI
+
+// Components - UI
+@import "./components/ui/menu";
+@import "./components/ui/logo";
+@import "./components/ui/search";
+@import "./components/ui/navigation";
+@import "./components/ui/bar";
+@import "./components/ui/preorder";
+@import "./components/ui/burger";
+
+// Components - UI
+
+// Components - Common
+@import "./components/common/header";
+@import "./components/common/footer";
+
+// Components - Common
+
+// Components - Pages
+@import "./components/indexPage/hero";
+@import "./components/indexPage/products";
+@import "./components/indexPage/review";
+@import "./components/indexPage/store";
+
+@import "./components/productPage/product";
+@import "./components/productPage/description";
+@import "./components/productPage/requirement";
+@import "./components/productPage/screenshots";
+@import "./components/productPage/comment";
+@import "./components/productPage/recommendation";
+@import "./components/productPage/viewed";
+
+@import "./components/ticketPage/ticket";
+
+@import "./components/profilePage/main";
+@import "./components/profilePage/goods";
+
+@import "./components/createPage/create";
+
+@import "./components/editPage/edit";
+
+@import "./components/passwordPage/password";
+
+
+// Components - Pages
+
+// </СЕТКА>==================================================================
+
+// <ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>===========================
+
+// <ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>===========================

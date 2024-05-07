@@ -1,0 +1,62 @@
+.language {
+  position: relative;
+  z-index: 1;
+  margin-right: 1rem;
+  cursor: pointer;
+
+  @media (max-width: em(1360)) {
+    margin-left: auto;
+  }
+
+  @media (max-width: em(767)) {
+    margin-left: initial;
+  }
+
+  &__current {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &__dropdown {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    margin-top: 1rem;
+    width: max-content;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition), visibility var(--transition);
+  }
+
+  &__img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    width: 2.4rem;
+    height: 1.6rem;
+  }
+
+  &__dropdown-item {
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+
+  &:focus &__dropdown,
+  &:hover &__dropdown {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity var(--transition), visibility var(--transition);
+  }
+
+  &:focus &__current,
+  &:hover &__current {
+    &::before {
+      transform: translateY(-50%) rotate(-180deg);
+      transition: transform var(--transition);
+    }
+  }
+}

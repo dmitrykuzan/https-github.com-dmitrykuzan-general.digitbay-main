@@ -1,0 +1,59 @@
+.search {
+  margin-right: 4rem;
+
+  @media (max-width: em(1360)) {
+    margin-right: 2rem;
+  }
+
+  @media (max-width: em(992)) {
+    display: flex;
+    justify-content: center;
+    margin-right: initial;
+  }
+
+  &__form {
+    position: relative;
+    min-width: 56rem;
+
+    @media (max-width: em(1360)) {
+      min-width: 40rem;
+    }
+
+    @media (max-width: em(992)) {
+      min-width: 100%;
+      max-width: initial;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    left: 1.8rem;
+    top: 50%;
+    width: 2rem;
+    height: 2rem;
+    transform: translateY(-50%);
+
+    svg {
+      width: 1.8rem;
+      height: 1.8rem;
+      fill: var(--clr-primary-200);
+      stroke-width: 0.1rem;
+    }
+  }
+
+  &__input {
+    outline: none;
+    border-radius: 10rem;
+    padding-left: 5rem;
+    min-width: 100%;
+    min-height: 4.8rem;
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: var(--clr-primary-700);
+    background-color: var(--clr-default-500);
+
+    &::placeholder {
+      color: var(--clr-default-600);
+    }
+  }
+}

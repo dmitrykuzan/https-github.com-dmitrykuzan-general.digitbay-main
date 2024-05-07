@@ -1,0 +1,141 @@
+.goods {
+  padding-bottom: 12rem;
+
+  @media (max-width: em(575)) {
+    padding-bottom: 6rem;
+  }
+  &__title {
+    margin-bottom: 3rem;
+  }
+
+  &__wrapper {
+    margin-bottom: 3rem;
+  }
+
+  &__list {
+    overflow: hidden;
+    border-radius: 0.8rem;
+
+    @media (max-width: em(575)) {
+      margin-left: -1.5rem;
+      border-radius: initial !important;
+      width: calc(100% + 3rem);
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    margin-left: 2.5rem;
+    border-left: 0.1rem solid var(--clr-default-550);
+    padding-left: 2.5rem;
+    min-height: 5rem;
+
+    @media (max-width: em(767)) {
+      margin-left: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    @media (max-width: em(575)) {
+      justify-content: space-between;
+      margin-top: 2rem;
+      margin-left: initial;
+      border-left: initial;
+      padding-left: inherit;
+      min-height: initial;
+    }
+  }
+
+  .store__item-img {
+    @media (max-width: em(767)) {
+      margin-right: 1.5rem;
+      max-width: 13rem;
+    }
+
+    @media (max-width: em(575)) {
+      margin-right: auto;
+      min-width: 25rem;
+      max-width: initial;
+    }
+  }
+
+  .store__item-name {
+    @media (max-width: em(767)) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      display: none;
+      padding-right: 1.5rem;
+      padding-left: 1.5rem;
+      min-width: 14rem;
+
+      @media (max-width: em(575)) {
+        display: flex;
+      }
+
+      @media (max-width: em(375)) {
+        min-width: 11rem;
+      }
+    }
+
+    svg {
+      display: block;
+
+      @media (max-width: em(575)) {
+        display: none;
+      }
+    }
+
+
+    &--edit, &--delete {
+      svg {
+        width: 2.4rem;
+        height: 2.4rem;
+        fill: var(--clr-default-600);
+        transition: fill var(--transition);
+      }
+    }
+
+    &--edit {
+      margin-right: 1.8rem;
+
+      @media (max-width: em(575)) {
+        margin-right: initial;
+      }
+
+      svg {
+        width: 2.4rem;
+      }
+
+      &:hover {
+        svg {
+          fill: var(--clr-primary-200);
+          transition: fill var(--transition);
+        }
+      }
+
+      @media (max-width: em(767)) {
+        margin-right: 1rem;
+      }
+    }
+
+    &--delete {
+      svg {
+        width: 2.1rem;
+      }
+
+      &:hover {
+        svg {
+          fill: #FF4747;
+          transition: fill var(--transition);
+        }
+      }
+    }
+  }
+}

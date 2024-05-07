@@ -1,0 +1,13 @@
+.viewed {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+
+  &__list {
+    margin-bottom: initial;
+    padding-top: 1rem;
+  }
+
+  &__list-wrapper {
+    margin-bottom: 3rem;
+  }
+}

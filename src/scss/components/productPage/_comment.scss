@@ -1,0 +1,340 @@
+.comment {
+  margin-top: 9rem;
+  &__wrapper {
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+
+    @media (max-width: em(992)) {
+      flex-direction: column;
+    }
+  }
+
+  &__title-wrapper {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+
+    @media (max-width: em(992)) {
+      margin-right: initial;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__title {
+    margin-right: 3rem;
+    span {
+      font-weight: 400;
+      color: var(--clr-primary-400);
+    }
+  }
+
+  &__item-counter {
+    margin-left: 0.8rem;
+    color: var(--clr-default-600);
+  }
+
+  &__buttons-wrapper {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: em(992)) {
+      justify-content: space-between;
+    }
+
+    @media (max-width: em(767)) {
+      flex-direction: column;
+      align-items: initial;
+    }
+
+    @media (max-width: em(575)) {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: -1.5rem;
+        top: -0.5rem;
+        z-index: 1;
+        width: 3.2rem;
+        height: 2.4rem;
+        background-image: linear-gradient(
+          270deg,
+          #f5f5f7 0%,
+          rgba(245, 245, 247, 0) 100%
+        );
+      }
+    }
+  }
+
+  &__buttons {
+    margin-right: 2.5rem;
+
+    @media (max-width: em(767)) {
+      margin-right: initial;
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: em(575)) {
+      position: relative;
+      display: flex;
+      overflow: auto;
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  &__button {
+    font-weight: 500;
+    color: var(--clr-default-600);
+    transition: color var(--transition);
+
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+
+    &.active {
+      color: var(--clr-primary-200);
+    }
+
+    @media (max-width: em(575)) {
+      flex-shrink: 0;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        color: var(--clr-primary-200);
+        transition: color var(--transition);
+      }
+    }
+
+    &:focus {
+      color: var(--clr-primary-200);
+      transition: color var(--transition);
+    }
+  }
+
+  &__button-review {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    min-width: 16rem;
+    min-height: 4rem;
+    font-weight: 500;
+    color: var(--clr-default-100);
+    background-color: var(--clr-primary-200);
+    transition: background-color var(--transition);
+
+    span {
+      transition: transform var(--transition);
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: #32ADFF;
+        transition: background-color var(--transition);
+      }
+    }
+
+    &:focus {
+      background-color: #32ADFF;
+      transition: background-color var(--transition);
+    }
+
+    &:active {
+      span {
+        transform: translateY(0.3rem);
+        transition: transform var(--transition);
+      }
+    }
+  }
+
+  &__list {
+    margin-bottom: 6rem;
+    opacity: 1;
+    transition: opacity var(--transition);
+
+    &.hide {
+      margin-bottom: 0;
+      padding: initial;
+      height: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity var(--transition);
+    }
+
+    @media (max-width: em(575)) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__item {
+    border-radius: 0.8rem;
+    padding: 3rem;
+    background-color: var(--clr-default-100);
+
+    &:not(:last-child) {
+      margin-bottom: 1.2rem;
+    }
+
+    @media (max-width: em(575)) {
+      padding: 2.5rem;
+    }
+  }
+
+  &__user-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+
+    @media (max-width: em(575)) {
+      border-bottom: 0.1rem solid var(--clr-default-550);
+      padding-bottom: 1.5rem;
+    }
+  }
+
+  &__user {
+    display: flex;
+  }
+
+  &__user-name {
+    display: flex;
+    align-items: center;
+  }
+
+  &__user-avatar {
+    margin-right: 1.2rem;
+    max-width: 6rem;
+
+    @media (max-width: em(575)) {
+      display: none;
+    }
+  }
+
+  &__user-wrapper {
+
+  }
+
+  &__user-nickname {
+    margin-bottom: 0.8rem;
+  }
+
+  &__item-separate {
+    margin-right: 1.2rem;
+    margin-left: 1.2rem;
+    width: 0.1rem;
+    height: 1.7rem;
+    background-color: var(--clr-primary-400);
+  }
+
+  &__item-time {
+  }
+
+  &__user-time {
+  }
+
+  &__grade {
+    display: flex;
+
+    @media (max-width: em(767)) {
+      display: none;
+    }
+  }
+
+  &__mobile-buttons {
+    display: none;
+    @media (max-width: em(767)) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__grade-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.2rem solid var(--clr-default-550);
+    border-radius: 2rem;
+    min-width: 10rem;
+    min-height: 4rem;
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: var(--clr-primary-100);
+    transition: color var(--transition);
+
+    svg {
+      margin-right: 0.8rem;
+      width: 1.6rem;
+      height: 1.6rem;
+      fill: var(--clr-primary-100);
+      transition: fill var(--transition);
+    }
+
+    &--like {
+      margin-right: 1.2rem;
+
+      @media (max-width: em(767)) {
+        margin-right: initial;
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          color: var(--clr-primary-200);
+          transition: color var(--transition);
+          svg {
+            fill: var(--clr-primary-200);
+            transition: fill var(--transition);
+          }
+        }
+      }
+
+      &:focus {
+        color: var(--clr-primary-200);
+        transition: color var(--transition);
+        svg {
+          fill: var(--clr-primary-200);
+          transition: fill var(--transition);
+        }
+      }
+    }
+
+    &--dislike {
+      @media (hover: hover) {
+        &:hover {
+          color: #FF5045;;
+          transition: color var(--transition);
+          svg {
+            fill: #FF5045;
+            transition: fill var(--transition);
+          }
+        }
+      }
+
+      &:focus {
+        color: #FF5045;;
+        transition: color var(--transition);
+        svg {
+          fill: #FF5045;
+          transition: fill var(--transition);
+        }
+      }
+    }
+  }
+
+  &__text {
+    p {
+      line-height: 150%;
+      color: var(--clr-primary-700);
+    }
+
+    @media (max-width: em(767)) {
+      margin-bottom: 2.5rem;
+    }
+  }
+}

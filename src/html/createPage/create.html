@@ -1,0 +1,799 @@
+<section class="create">
+  <div class="container">
+    <div class="hero__search"></div>
+    <div class="create__wrapper">
+      <h1 class="create__title title">Добавить новый товар</h1>
+
+      <form class="create__form" method="post">
+        <ul class="create__info-list">
+          <li class="create__info-item">
+            <div class="create__info-text">
+              <h3 class="create__info-title">Название</h3>
+              <p class="create__info-subtitle">Максимум 100 символов</p>
+            </div>
+            <div class="create__input-wrapper">
+              <input
+                type="text"
+                name="name"
+                class="create__input"
+                placeholder="Название вашего товара"
+              />
+            </div>
+          </li>
+
+          <li class="create__info-item">
+            <div class="create__info-text">
+              <h3 class="create__info-title">Категория</h3>
+              <p class="create__info-subtitle">
+                Необходимо для классификации вашего товара
+              </p>
+            </div>
+            <div class="create__input-wrapper">
+              <select name="category" class="create__select">
+                <option class="create__option" value="Category 1">Category 1</option>
+                <option class="create__option" value="Category 2">Category 2</option>
+                <option class="create__option" value="Category 3">Category 3</option>
+              </select>
+            </div>
+          </li>
+
+          <li class="create__info-item">
+            <div class="create__info-text">
+              <h3 class="create__info-title">Свойство товара</h3>
+              <p class="create__info-subtitle">
+                Определяет объем вашего товара
+              </p>
+            </div>
+            <div class="create__input-wrapper">
+              <div class="create__label-wrapper">
+                <label class="ticket__input-label">
+                  <input
+                    class="ticket__input-radio"
+                    type="radio"
+                    name="property product"
+                  />
+                  <span class="ticket__input-box"></span>
+                  <span class="create__input-text">
+                    Уникальный товар <span>(продается один раз)</span>
+                  </span>
+                </label>
+              </div>
+
+              <div class="create__label-wrapper">
+                <label class="ticket__input-label">
+                  <input
+                    class="ticket__input-radio"
+                    type="radio"
+                    name="property product"
+                  />
+                  <span class="ticket__input-box"></span>
+                  <span class="create__input-text">
+                    Универсальный товар
+                    <span> (продается неограниченное количество раз)</span>
+                  </span>
+                </label>
+              </div>
+            </div>
+          </li>
+
+          <li class="create__info-item">
+            <div class="create__info-text">
+              <h3 class="create__info-title">Тип товара</h3>
+              <p class="create__info-subtitle">Определяет тип вашего товара</p>
+            </div>
+            <div class="create__input-wrapper">
+              <div class="create__label-wrapper">
+                <label class="ticket__input-label">
+                  <input class="ticket__input-radio" type="radio" name="file" />
+                  <span class="ticket__input-box"></span>
+                  <span class="create__input-text">
+                    Файл <span>(например .zip архив)</span>
+                  </span>
+                </label>
+              </div>
+
+              <div class="create__label-wrapper">
+                <label class="ticket__input-label">
+                  <input class="ticket__input-radio" type="radio" name="file" />
+                  <span class="ticket__input-box"></span>
+                  <span class="create__input-text">
+                    Тестовая информация <span>(например ключ от игры)</span>
+                  </span>
+                </label>
+              </div>
+
+              <div class="create__label-wrapper">
+                <label class="ticket__input-label">
+                  <input class="ticket__input-radio" type="radio" name="file" />
+                  <span class="ticket__input-box"></span>
+                  <span class="create__input-text">
+                    Елемент <span>(например золото в игре)</span>
+                  </span>
+                </label>
+              </div>
+            </div>
+          </li>
+
+          <li class="create__info-item">
+            <div class="create__info-text">
+              <h3 class="create__info-title">Стоимость товара</h3>
+            </div>
+            <div class="create__input-wrapper create__input-wrapper--flex">
+              <input
+                type="text"
+                name="price"
+                class="create__input create__input--short"
+                placeholder="Сумма"
+              />
+
+              <select name="category" class="create__select">
+                <option class="create__option" value="Category 1">UAH</option>
+                <option class="create__option" value="Category 2">USD</option>
+                <option class="create__option" value="Category 3">PLN</option>
+              </select>
+            </div>
+          </li>
+
+          <li class="create__info-item">
+            <div class="create__info-text">
+              <h3 class="create__info-title">Обложка товара</h3>
+            </div>
+            <div class="create__input-wrapper">
+              <label class="create__upload-label">
+                <input
+                  type="file"
+                  name="poster"
+                  class="create__upload-input"
+                  multiple
+                />
+                <span class="create__upload-image">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#plus"></use>
+                  </svg>
+                </span>
+
+                <span class="create__upload-text">
+                  <span class="create__download-title">Добавить фотографию</span>
+                  <span class="create__download-text">
+                    Перетащите фото сюда или нажмите. Вы можете добавить одно
+                    изображения 392x504 в формате .jpg, .png, размером файла до
+                    2 МБ.
+                  </span>
+                </span>
+              </label>
+
+              <label
+                class="create__upload-label create__upload-label--horizontally"
+              >
+                <input
+                  type="file"
+                  name="poster"
+                  class="create__upload-input"
+                  multiple
+                />
+                <span
+                  class="create__upload-image create__upload-image--horizontally"
+                >
+                  <svg>
+                    <use xlink:href="img/sprite.svg#plus"></use>
+                  </svg>
+                </span>
+
+                <span class="create__upload-text">
+                  <span class="create__download-title">Добавить фотографию</span>
+                  <span class="create__download-text">
+                    Перетащите фото сюда или нажмите. Вы можете добавить одно
+                    изображения 392x504 в формате .jpg, .png, размером файла до
+                    2 МБ.
+                  </span>
+                </span>
+              </label>
+            </div>
+          </li>
+
+          <li class="create__info-item">
+            <div class="create__info-text">
+              <h3 class="create__info-title">Краткое описание</h3>
+              <p class="create__info-subtitle">
+                Краткое описание находиться возле обложки товара
+              </p>
+            </div>
+            <div class="create__input-wrapper">
+              <input
+                type="text"
+                name="date"
+                class="create__input create__input--description"
+                placeholder="Дата выхода"
+              />
+
+              <input
+                type="text"
+                name="developer"
+                class="create__input create__input--description"
+                placeholder="Розработчик"
+              />
+
+              <input
+                type="text"
+                name="publisher"
+                class="create__input create__input--description"
+                placeholder="Издатель"
+              />
+
+              <input
+                type="text"
+                name="genre"
+                class="create__input create__input--description"
+                placeholder="Жанр"
+              />
+
+              <input
+                type="text"
+                name="tags"
+                class="create__input create__input--description"
+                placeholder="Теги"
+              />
+
+              <input
+                type="text"
+                name="platform"
+                class="create__input create__input--description"
+                placeholder="Платформа"
+              />
+
+              <div class="create__tags-wrapper create__input--description">
+                <p class="create__tags-text">Языки интерфейса</p>
+                <select class="create__tags" data-trigger name="choices-multiple-default" id="choices-multiple-default" placeholder="This is a placeholder" multiple>
+                  <option value="Русский" selected>Русский</option>
+                  <option value="Английский" selected>Английский</option>
+                  <option value="Немецкий">Немецкий</option>
+                  <option value="Французкий">Французкий</option>
+                  <option value="Испанский">Испанский</option>
+                </select>
+              </div>
+
+              <textarea class="create__input create__input--description create__input--voice" name="language" placeholder="Языки озвучки"></textarea>
+
+              <input
+                type="text"
+                name="pegi"
+                class="create__input create__input--description"
+                placeholder="PEGI"
+              />
+            </div>
+          </li>
+
+          <li class="create__info-item create__info-item--column">
+            <div class="create__info-text create__info-text--mb">
+              <h3 class="create__info-title">Описание</h3>
+              <p class="create__info-subtitle">
+                Полное описание продаваемого товара
+              </p>
+            </div>
+            <div class="create__textarea-wrapper">
+              <textarea
+                class="create__textarea"
+                id="description"
+                name="description"
+                placeholder="Ваш текст"
+              ></textarea>
+            </div>
+          </li>
+
+          <li class="create__info-item create__info-item--column">
+            <div class="create__info-text create__info-text--mb">
+              <h3 class="create__info-title">Системные требования</h3>
+              <p class="create__info-subtitle">
+                Трбования к системе, на которой будет работать ваш продукт
+              </p>
+            </div>
+            <div class="create__tabs">
+              <div class="create__tabs-navigation">
+                <div class="create__tabs-navigation-btn active">Windows</div>
+                <div class="create__tabs-navigation-btn">Mac OS</div>
+                <div class="create__tabs-navigation-btn">Linux</div>
+              </div>
+
+              <div class="create__tabs-wrapper">
+                <div class="create__tabs-content">
+                  <div class="create__tabs-info">
+                    <h4 class="create__tabs-title">МИНИМАЛЬНЫЕ:</h4>
+                    <ul class="create__tabs-list">
+                      <li class="create__tabs-item">
+                        <div class="create__tabs-icon requirement__content-item--os"></div>
+                        <input
+                          type="text"
+                          name="windows.os"
+                          class="create__input create__input--tabs"
+                          placeholder="Windows 10 64-bits"
+                        />
+                      </li>
+                      <li class="create__tabs-item">
+                        <div class="create__tabs-icon requirement__content-item--cpu"></div>
+                        <input
+                          type="text"
+                          name="windows.cpu"
+                          class="create__input create__input--tabs"
+                          placeholder="Процессор:"
+                        />
+                      </li>
+                      <li class="create__tabs-item">
+                        <div class="create__tabs-icon requirement__content-item--ram"></div>
+                        <input
+                          type="text"
+                          name="windows.ram"
+                          class="create__input create__input--tabs"
+                          placeholder="Оперативная память:"
+                        />
+                      </li>
+                      <li class="create__tabs-item">
+                        <div class="create__tabs-icon requirement__content-item--gpu"></div>
+                        <input
+                          type="text"
+                          name="windows.gpu"
+                          class="create__input create__input--tabs"
+                          placeholder="Видеокарта:"
+                        />
+                      </li>
+                      <li class="create__tabs-item">
+                        <div class="create__tabs-icon requirement__content-item--directx"></div>
+                        <input
+                          type="text"
+                          name="windows.directx"
+                          class="create__input create__input--tabs"
+                          placeholder="DirectX:"
+                        />
+                      </li>
+                      <li class="create__tabs-item">
+                        <div class="create__tabs-icon requirement__content-item--hdd"></div>
+                        <input
+                          type="text"
+                          name="windows.hdd"
+                          class="create__input create__input--tabs"
+                          placeholder="Место на диске:"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="create__tabs-info">
+                    <h4 class="create__tabs-title">РЕКОМЕНДОВАННЫЕ:</h4>
+                    <ul class="create__tabs-list">
+                      <li class="create__tabs-item">
+                        <div class="create__tabs-icon requirement__content-item--os"></div>
+                        <input
+                          type="text"
+                          name="windows.os.rec"
+                          class="create__input create__input--tabs"
+                          placeholder="Windows 10 64-bits"
+                        />
+                      </li>
+                      <li class="create__tabs-item">
+                        <div class="create__tabs-icon requirement__content-item--cpu"></div>
+                        <input
+                          type="text"
+                          name="windows.cpu.rec"
+                          class="create__input create__input--tabs"
+                          placeholder="Процессор:"
+                        />
+                      </li>
+                      <li class="create__tabs-item">
+                        <div class="create__tabs-icon requirement__content-item--ram"></div>
+                        <input
+                          type="text"
+                          name="windows.ram.rec"
+                          class="create__input create__input--tabs"
+                          placeholder="Оперативная память:"
+                        />
+                      </li>
+                      <li class="create__tabs-item">
+                        <div class="create__tabs-icon requirement__content-item--gpu"></div>
+                        <input
+                          type="text"
+                          name="windows.gpu.rec"
+                          class="create__input create__input--tabs"
+                          placeholder="Видеокарта:"
+                        />
+                      </li>
+                      <li class="create__tabs-item">
+                        <div class="create__tabs-icon requirement__content-item--directx"></div>
+                        <input
+                          type="text"
+                          name="windows.directx.rec"
+                          class="create__input create__input--tabs"
+                          placeholder="DirectX:"
+                        />
+                      </li>
+                      <li class="create__tabs-item">
+                        <div class="create__tabs-icon requirement__content-item--hdd"></div>
+                        <input
+                          type="text"
+                          name="windows.hdd.rec"
+                          class="create__input create__input--tabs"
+                          placeholder="Место на диске:"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="create__tabs-content">
+                  <div class="create__tabs-info">
+                    <h4 class="create__tabs-title">МИНИМАЛЬНЫЕ:</h4>
+                    <ul class="create__tabs-list">
+                      <li class="create__tabs-item">
+                        <div class="create__tabs-icon requirement__content-item--os"></div>
+                        <input
+                          type="text"
+                          name="mac.os"
+                          class="create__input create__input--tabs"
+                          placeholder="Windows 10 64-bits"
+                        />
+                      </li>
+                      <li class="create__tabs-item">
+                        <div class="create__tabs-icon requirement__content-item--cpu"></div>
+                        <input
+                          type="text"
+                          name="mac.cpu"
+                          class="create__input create__input--tabs"
+                          placeholder="Процессор:"
+                        />
+                      </li>
+                      <li class="create__tabs-item">
+                        <div class="create__tabs-icon requirement__content-item--ram"></div>
+                        <input
+                          type="text"
+                          name="mac.ram"
+                          class="create__input create__input--tabs"
+                          placeholder="Оперативная память:"
+                        />
+                      </li>
+                      <li class="create__tabs-item">
+                        <div class="create__tabs-icon requirement__content-item--gpu"></div>
+                        <input
+                          type="text"
+                          name="mac.gpu"
+                          class="create__input create__input--tabs"
+                          placeholder="Видеокарта:"
+                        />
+                      </li>
+                      <li class="create__tabs-item">
+                        <div class="create__tabs-icon requirement__content-item--directx"></div>
+                        <input
+                          type="text"
+                          name="mac.directx"
+                          class="create__input create__input--tabs"
+                          placeholder="DirectX:"
+                        />
+                      </li>
+                      <li class="create__tabs-item">
+                        <div class="create__tabs-icon requirement__content-item--hdd"></div>
+                        <input
+                          type="text"
+                          name="mac.hdd"
+                          class="create__input create__input--tabs"
+                          placeholder="Место на диске:"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="create__tabs-info">
+                    <h4 class="create__tabs-title">РЕКОМЕНДОВАННЫЕ:</h4>
+                    <ul class="create__tabs-list">
+                      <li class="create__tabs-item">
+                        <div class="create__tabs-icon requirement__content-item--os"></div>
+                        <input
+                          type="text"
+                          name="mac.os.rec"
+                          class="create__input create__input--tabs"
+                          placeholder="Windows 10 64-bits"
+                        />
+                      </li>
+                      <li class="create__tabs-item">
+                        <div class="create__tabs-icon requirement__content-item--cpu"></div>
+                        <input
+                          type="text"
+                          name="mac.cpu.rec"
+                          class="create__input create__input--tabs"
+                          placeholder="Процессор:"
+                        />
+                      </li>
+                      <li class="create__tabs-item">
+                        <div class="create__tabs-icon requirement__content-item--ram"></div>
+                        <input
+                          type="text"
+                          name="mac.ram.rec"
+                          class="create__input create__input--tabs"
+                          placeholder="Оперативная память:"
+                        />
+                      </li>
+                      <li class="create__tabs-item">
+                        <div class="create__tabs-icon requirement__content-item--gpu"></div>
+                        <input
+                          type="text"
+                          name="mac.gpu.rec"
+                          class="create__input create__input--tabs"
+                          placeholder="Видеокарта:"
+                        />
+                      </li>
+                      <li class="create__tabs-item">
+                        <div class="create__tabs-icon requirement__content-item--directx"></div>
+                        <input
+                          type="text"
+                          name="mac.directx.rec"
+                          class="create__input create__input--tabs"
+                          placeholder="DirectX:"
+                        />
+                      </li>
+                      <li class="create__tabs-item">
+                        <div class="create__tabs-icon requirement__content-item--hdd"></div>
+                        <input
+                          type="text"
+                          name="mac.hdd.rec"
+                          class="create__input create__input--tabs"
+                          placeholder="Место на диске:"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="create__tabs-content">
+                  <div class="create__tabs-info">
+                    <h4 class="create__tabs-title">МИНИМАЛЬНЫЕ:</h4>
+                    <ul class="create__tabs-list">
+                      <li class="create__tabs-item">
+                        <div class="create__tabs-icon requirement__content-item--os"></div>
+                        <input
+                          type="text"
+                          name="linux.os"
+                          class="create__input create__input--tabs"
+                          placeholder="Windows 10 64-bits"
+                        />
+                      </li>
+                      <li class="create__tabs-item">
+                        <div class="create__tabs-icon requirement__content-item--cpu"></div>
+                        <input
+                          type="text"
+                          name="linux.cpu"
+                          class="create__input create__input--tabs"
+                          placeholder="Процессор:"
+                        />
+                      </li>
+                      <li class="create__tabs-item">
+                        <div class="create__tabs-icon requirement__content-item--ram"></div>
+                        <input
+                          type="text"
+                          name="linux.ram"
+                          class="create__input create__input--tabs"
+                          placeholder="Оперативная память:"
+                        />
+                      </li>
+                      <li class="create__tabs-item">
+                        <div class="create__tabs-icon requirement__content-item--gpu"></div>
+                        <input
+                          type="text"
+                          name="linux.gpu"
+                          class="create__input create__input--tabs"
+                          placeholder="Видеокарта:"
+                        />
+                      </li>
+                      <li class="create__tabs-item">
+                        <div class="create__tabs-icon requirement__content-item--directx"></div>
+                        <input
+                          type="text"
+                          name="linux.directx"
+                          class="create__input create__input--tabs"
+                          placeholder="DirectX:"
+                        />
+                      </li>
+                      <li class="create__tabs-item">
+                        <div class="create__tabs-icon requirement__content-item--hdd"></div>
+                        <input
+                          type="text"
+                          name="linux.hdd"
+                          class="create__input create__input--tabs"
+                          placeholder="Место на диске:"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="create__tabs-info">
+                    <h4 class="create__tabs-title">РЕКОМЕНДОВАННЫЕ:</h4>
+                    <ul class="create__tabs-list">
+                      <li class="create__tabs-item">
+                        <div class="create__tabs-icon requirement__content-item--os"></div>
+                        <input
+                          type="text"
+                          name="linux.os.rec"
+                          class="create__input create__input--tabs"
+                          placeholder="Windows 10 64-bits"
+                        />
+                      </li>
+                      <li class="create__tabs-item">
+                        <div class="create__tabs-icon requirement__content-item--cpu"></div>
+                        <input
+                          type="text"
+                          name="linux.cpu.rec"
+                          class="create__input create__input--tabs"
+                          placeholder="Процессор:"
+                        />
+                      </li>
+                      <li class="create__tabs-item">
+                        <div class="create__tabs-icon requirement__content-item--ram"></div>
+                        <input
+                          type="text"
+                          name="linux.ram.rec"
+                          class="create__input create__input--tabs"
+                          placeholder="Оперативная память:"
+                        />
+                      </li>
+                      <li class="create__tabs-item">
+                        <div class="create__tabs-icon requirement__content-item--gpu"></div>
+                        <input
+                          type="text"
+                          name="linux.gpu.rec"
+                          class="create__input create__input--tabs"
+                          placeholder="Видеокарта:"
+                        />
+                      </li>
+                      <li class="create__tabs-item">
+                        <div class="create__tabs-icon requirement__content-item--directx"></div>
+                        <input
+                          type="text"
+                          name="linux.directx.rec"
+                          class="create__input create__input--tabs"
+                          placeholder="DirectX:"
+                        />
+                      </li>
+                      <li class="create__tabs-item">
+                        <div class="create__tabs-icon requirement__content-item--hdd"></div>
+                        <input
+                          type="text"
+                          name="linux.hdd.rec"
+                          class="create__input create__input--tabs"
+                          placeholder="Место на диске:"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="create__info-item">
+            <div class="create__info-text">
+              <h3 class="create__info-title">Скриншоти товара</h3>
+              <p class="create__info-subtitle">Максимум 100 символов</p>
+            </div>
+
+            <div class="create__input-wrapper create__input-wrapper--screenshots">
+              <div class="create__screenshots-wrapper">
+                <span class="create__upload-text create__screenshots-text">
+                  <span class="create__download-title">Добавить фотографию</span>
+                  <span class="create__download-text">
+                    Перетащите фото сюда или нажмите. Вы можете добавить одно
+                    изображения 392x504 в формате .jpg, .png, размером файла до
+                    2 МБ.
+                  </span>
+                </span>
+
+                <div class="create__screenshots">
+                  <label class="create__upload-label create__screenshots-label">
+                    <input
+                      type="file"
+                      name="poster"
+                      class="create__upload-input"
+                      multiple
+                    />
+                    <span class="create__upload-image create__screenshots-image">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#plus"></use>
+                      </svg>
+                    </span>
+                  </label>
+                  <label class="create__upload-label create__screenshots-label">
+                    <input
+                      type="file"
+                      name="poster"
+                      class="create__upload-input"
+                      multiple
+                    />
+                    <span class="create__upload-image create__screenshots-image">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#plus"></use>
+                      </svg>
+                    </span>
+                  </label>
+                  <label class="create__upload-label create__screenshots-label">
+                    <input
+                      type="file"
+                      name="poster"
+                      class="create__upload-input"
+                      multiple
+                    />
+                    <span class="create__upload-image create__screenshots-image">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#plus"></use>
+                      </svg>
+                    </span>
+                  </label>
+                  <label class="create__upload-label create__screenshots-label">
+                    <input
+                      type="file"
+                      name="poster"
+                      class="create__upload-input"
+                      multiple
+                    />
+                    <span class="create__upload-image create__screenshots-image">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#plus"></use>
+                      </svg>
+                    </span>
+                  </label>
+                  <label class="create__upload-label create__screenshots-label">
+                    <input
+                      type="file"
+                      name="poster"
+                      class="create__upload-input"
+                      multiple
+                    />
+                    <span class="create__upload-image create__screenshots-image">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#plus"></use>
+                      </svg>
+                    </span>
+                  </label>
+                  <label class="create__upload-label create__screenshots-label">
+                    <input
+                      type="file"
+                      name="poster"
+                      class="create__upload-input"
+                      multiple
+                    />
+                    <span class="create__upload-image create__screenshots-image">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#plus"></use>
+                      </svg>
+                    </span>
+                  </label>
+                  <label class="create__upload-label create__screenshots-label">
+                    <input
+                      type="file"
+                      name="poster"
+                      class="create__upload-input"
+                      multiple
+                    />
+                    <span class="create__upload-image create__screenshots-image">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#plus"></use>
+                      </svg>
+                    </span>
+                  </label>
+                  <label class="create__upload-label create__screenshots-label">
+                    <input
+                      type="file"
+                      name="poster"
+                      class="create__upload-input"
+                      multiple
+                    />
+                    <span class="create__upload-image create__screenshots-image">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#plus"></use>
+                      </svg>
+                    </span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="create__form-buttons">
+          <button class="create__form-button create__form-button--cancel main__button">Отменить</button>
+          <button class="create__form-button create__form-button--save" type="submit">Сохранить товар</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

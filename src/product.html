@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>Easy Game</title>
+  <meta name="description" lang="ru" content="Описание сайта">
+
+  @include("html/common/head.html")
+</head>
+
+<body>
+  <div class="wrapper" data-overlay="false">
+    @include("html/common/header.html")
+    <main>
+      @include("html/productPage/product.html")
+      @include("html/productPage/description.html")
+      @include("html/productPage/requirement.html")
+      @include("html/productPage/screenshots.html")
+      @include("html/productPage/comment.html")
+      @include("html/productPage/recommendation.html")
+      @include("html/productPage/viewed.html")
+    </main>
+    @include("html/common/footer.html")
+  </div>
+</body>
+
+</html>
